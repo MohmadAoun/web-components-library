@@ -1,0 +1,107 @@
+/* Common container styling */
+.text-field-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 50%;
+}
+
+/* Filled variant */
+.text-field-container.filled .input-wrapper {
+  display: flex;
+  background-color: #c3c3c3; /* Light background for filled variant */
+  border: none;
+  border-radius: 4px;
+  padding: 2%;
+}
+
+.text-field-container.filled .label {
+  color: #666;
+}
+
+.text-field-container.filled .label.focused {
+  color: #6200ea; /* Active color */
+}
+
+/* Outlined variant */
+.text-field-container.outlined .input-wrapper {
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: transparent; /* Transparent background for outlined variant */
+  padding: 2%;
+}
+
+.text-field-container.outlined .label {
+  color: #009990;
+}
+
+.text-field-container.outlined .label.w-leading.focused {
+  color: #6200ea; /* Active color */
+}
+
+.label.w-leading {
+  position: absolute;
+  left: 10.689%; /* Adjust for leading icon */
+  top: 36%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  transition: all 0.2s ease;
+  pointer-events: none;
+}
+
+.label.wo-leading {
+  position: absolute;
+  left: 6%; /* Adjust for no leading icon */
+  top: 36%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  transition: all 0.2s ease;
+  pointer-events: none;
+}
+
+.label.wo-leading.focused {
+  top: 10%;
+  left: 6%;
+  font-size: 11px;
+}
+
+.label.w-leading.focused {
+  top: 19%;
+  left: 12%;
+  font-size: 11px;
+}
+
+input {
+  flex: 1;
+  padding: 4% 9%;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  background: transparent;
+}
+
+.icon {
+  color: #666;
+}
+
+.leading-icon {
+  display: inline;
+  position: absolute;
+  left: 2%;
+  align-self: center;
+}
+
+.trailing-icon {
+  display: inline;
+  position: absolute;
+  right: 2%;
+  align-self: center;
+  cursor: pointer;
+}
+
+.supporting-text {
+  font-size: 10px;
+  color: #777;
+  margin-top: 4px;
+}
